@@ -17,6 +17,10 @@ const App = () => {
 	const addTask = newTask => {
 		setTasks([...tasks, { taskText: newTask }])
 	}
+	// Функция для удаления задачи
+	const delTask = taskText => {
+		setTasks(tasks.filter(task => task.taskText !== taskText))
+	}
 
 	return (
 		<div className='container todo-con'>
@@ -26,16 +30,14 @@ const App = () => {
 						key={index}
 						color={colors[index % colors.length]}
 						taskText={task.taskText}
+						delTask={() => delTask(task.taskText)} // передаем функцию удаления в ToDo
 					/>
 				))}
 				<AddBtn showCreateModal={showCreateModal} />
 			</div>
 
 			{showModal && (
-				<CreateModal
-					hideCreateModal={hideCreateModal}
-					addTask={addTask} // Передаем функцию сюда
-				/>
+				<CreateModal hideCreateModal={hideCreateModal} addTask={addTask} />
 			)}
 		</div>
 	)
