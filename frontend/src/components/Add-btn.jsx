@@ -1,18 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AddBtnIcon from '../img/addbtn.ico'
-import CreateModal from './CreateModal'
 
-const AddBtn = () => {
-	const [showModal, setShowModal] = useState(false) // Состояние для модального окна
-	// Функция для отображения модала
-	const showCreateModal = () => {
-		setShowModal(true)
-	}
-	// Функция для скрытия модала
-	const hideCreateModal = () => {
-		setShowModal(false)
-	}
-
+const AddBtn = ({ showCreateModal }) => {
 	return (
 		<div className='addTaskButton col-lg-4 col-md-6 col-xs-12'>
 			<div
@@ -21,7 +10,6 @@ const AddBtn = () => {
 			>
 				<img className='add-icon' src={AddBtnIcon} alt='Add task' />
 			</div>
-			{showModal && <CreateModal hideCreateModal={hideCreateModal} />}
 		</div>
 	)
 }
