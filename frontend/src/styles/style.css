@@ -1,7 +1,6 @@
 :root {
 	--status-color1: #ff4c4c;
-	--status-color2: #ffd93d;
-	--status-color3: #4caf50;
+	--status-color2: #4caf50;
 	--color1: #ffc1d6; /* Контрастная версия для темной темы #FF5A9D */
 	--color2: #c2b9ff; /* Контрастная версия для темной темы #7B61FF */
 	--color3: #a8e3f5; /* Контрастная версия для темной темы #4ABCE3 */
