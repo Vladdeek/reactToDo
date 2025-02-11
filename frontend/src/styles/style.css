@@ -43,11 +43,10 @@ p {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-	display: none;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 1000;
-	opacity: 0;
 	transition: opacity 0.3s ease;
 }
 
@@ -88,20 +87,19 @@ input {
 	padding: 0 10px;
 	top: 275px;
 	font-size: 25px;
-	margin: 10px 0;
 	font-weight: 100;
 	outline: 0;
 	background-color: rgba(255, 255, 255, 0.25);
 	color: var(--color);
-}
-input:focus {
-	border: solid 1px var(color);
-	filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-}
-input::placeholder {
-	color: var(--color-text);
-	filter: invert(1);
-	opacity: 0.33;
+	&:focus {
+		border: solid 1px var(color);
+		filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+	}
+	&::placeholder {
+		color: var(--color-text);
+		filter: invert(1);
+		opacity: 0.33;
+	}
 }
 
 .save {
@@ -116,15 +114,16 @@ input::placeholder {
 	font-size: 25px;
 	font-weight: 400;
 	transition: 0.25s;
+	&:hover {
+		transform: scale(1.025);
+		transition: 0.25s;
+	}
+	&:active {
+		transform: scale(0.975);
+		transition: 0.25s;
+	}
 }
-.save:hover {
-	transform: scale(1.025);
-	transition: 0.25s;
-}
-.save:active {
-	transform: scale(0.975);
-	transition: 0.25s;
-}
+
 #color1 {
 	background-color: var(--color1);
 }
@@ -161,15 +160,16 @@ input::placeholder {
 	cursor: pointer;
 	filter: invert(0);
 	transition: 0.2s;
+	&:hover {
+		border: dashed 2px rgba(0, 0, 0, 0.5);
+		transition: 0.2s;
+	}
+	&:hover img {
+		opacity: 0.5;
+		transition: 0.2s;
+	}
 }
-.new:hover {
-	border: dashed 2px rgba(0, 0, 0, 0.5);
-	transition: 0.2s;
-}
-.new:hover img {
-	opacity: 0.5;
-	transition: 0.2s;
-}
+
 img.add-icon {
 	height: 80%;
 	width: auto;
