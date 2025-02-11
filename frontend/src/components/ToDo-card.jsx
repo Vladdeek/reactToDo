@@ -6,8 +6,10 @@ const ToDo = () => {
 			<div className='content' id='color1'>
 				<button className='del-btn text-center'>+</button>
 				<div className='text'>
-					<p className='name-task'>Testing</p>
-					<p className='description-task'>Test To-Do</p>
+					<p className='task'>
+						Разработать веб-приложение для управления задачами с возможностью
+						добавления, редактирования.
+					</p>
 				</div>
 				<div
 					className='status'

@@ -8,16 +8,7 @@ const CreateModal = ({ hideCreateModal }) => {
 				<div className='row'>
 					<div className='col-12 d-flex justify-content-center'>
 						<form className='create-task' action=''>
-							<input
-								className='input-name-task'
-								type='text'
-								placeholder='Название задачи'
-							/>
-							<input
-								className='input-description-task'
-								type='text'
-								placeholder='Описание задачи'
-							/>
+							<input className='input-task' type='text' placeholder='Задача' />
 							<input
 								type='submit'
 								className='save'

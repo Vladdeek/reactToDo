@@ -30,10 +30,6 @@ p {
 	padding: 0;
 	color: var(--color-text);
 }
-.name-maxlengh,
-.description-maxlengh {
-	color: var(--color);
-}
 
 /* Стиль для всей модальной области */
 .createTask-modal {
@@ -69,7 +65,7 @@ p {
 	border: 1px solid rgba(200, 200, 200, 0.25);
 	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.09));
 	padding: 20px;
-	border-radius: 15px;
+	border-radius: 25px;
 	width: auto; /* Вы можете изменить размер в зависимости от ваших предпочтений */
 	display: flex;
 	flex-direction: column;
@@ -78,7 +74,7 @@ p {
 	z-index: 1001; /* Модальное окно должно быть выше фона */
 }
 
-input {
+.input-task {
 	z-index: 5;
 	height: auto;
 	width: 400px;
@@ -180,23 +176,10 @@ img.add-icon {
 .content:hover {
 	transition: 0.2s;
 }
-.description-maxlengh,
-.name-maxlengh {
-	font-weight: 100;
-	font-size: 10px;
-	margin-top: -10px;
-	padding: 0;
-}
 
-.name-task {
-	font-size: 25px;
-	font-weight: 600;
-	user-select: none;
-	-webkit-user-select: none;
-}
-.description-task {
-	font-size: 17;
-	font-weight: 100;
+.task {
+	font-size: 20px;
+	font-weight: 500;
 	user-select: none;
 	-webkit-user-select: none;
 }
