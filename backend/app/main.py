@@ -51,10 +51,10 @@ def get_db():
 @app.post("/todo/", response_model=DbTodo)
 async def create_todo(todo: TodoCreate, db: Session = Depends(get_db)) -> DbTodo:   
     # Получаем имя пользователя из запроса (должно быть передано вместе с задачей)
-    user_name = todo.user_name
+    #user_name = todo.user_name
 
     # Создаем объект задачи с именем пользователя
-    db_todo = Todo(title=todo.title, description=todo.description, user_name=user_name)
+    db_todo = Todo(title=todo.title) #user_name=user_name)
 
     # Добавляем задачу в базу данных
     db.add(db_todo)
