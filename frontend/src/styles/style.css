@@ -177,10 +177,11 @@ img.add-icon {
 }
 
 .task {
-	font-size: 20px;
-	font-weight: 500;
+	font-size: 22px;
+	font-weight: 600;
 	user-select: none;
 	-webkit-user-select: none;
+	word-wrap: break-word;
 }
 .status {
 	position: absolute;
